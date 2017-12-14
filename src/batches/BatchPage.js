@@ -1,26 +1,28 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { fetch as fetchbatches } from '../actions/batches'
+import { fetch as fetchBatches } from '../actions/batches'
 import Title from '../components/Title'
 
-export class batchPage extends PureComponent {
-  static propTypes = {
-    title: PropTypes.string,
-  }
+export class BatchPage extends PureComponent {
+  // static propTypes = {
+  //   batchNumber: PropTypes.number.isRequired,
+  //   startedAt: PropTypes.date.isRequired,
+  //   endAt: PropTypes.date.isRequired
+  // }
 
   componentWillMount() {
-    this.props.dispatch(fetchbatches())
+    this.props.dispatch(fetchBatches())
   }
 
   render() {
-    const { title } = this.props
+    const { batchNumber } = this.props
 
-    if (!title) return null
+    if (!batchNumber) return null
 
     return(
       <div className="batch page">
-        <Title content={ title } />
+        <Title content={ batchNumber } />
       </div>
     )
   }
@@ -40,4 +42,4 @@ const mapStateToProps = ({ batches }, { match }) => {
 }
 
 
-export default connect(mapStateToProps)(batchPage)
+export default connect(mapStateToProps)(BatchPage)

@@ -70,8 +70,6 @@ class BatchEditor extends PureComponent {
           className="batchNumber"
           placeholder="Type the batch number"
           defaultValue={this.state.batchNumber}
-          // onChange={this.updatebatchNumber.bind(this)}
-          // onKeyUp={this.updatebatchNumber.bind(this)} />
           />
       </label>
       <br />
@@ -82,8 +80,6 @@ class BatchEditor extends PureComponent {
           className="startedAt"
           placeholder="Type the start date"
           defaultValue={this.state.startedAt}
-          // onChange={this.updatestartedAt.bind(this)}
-          // onKeyUp={this.updatestartedAt.bind(this)} />
           />
       </label>
       <br />
@@ -94,9 +90,7 @@ class BatchEditor extends PureComponent {
           className="endAt"
           placeholder="Type the end date"
           defaultValue={this.state.endAt}
-          // onChange={this.updateendAt.bind(this)}
-          // onKeyUp={this.updateendAt.bind(this)} />
-          />
+        />
       </label>
       <br />
         <div className="actions">
