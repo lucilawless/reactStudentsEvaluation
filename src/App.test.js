@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import chai, { expect } from 'chai'
 import chaiEnzyme from 'chai-enzyme'
 import App from './App'
-import RecipesContainer from './recipes/RecipesContainer'
+import batchesContainer from './batches/batchesContainer'
 
 chai.use(chaiEnzyme())
 
@@ -15,7 +15,7 @@ describe('<App />', () => {
     expect(app).to.have.tagName('div')
   })
 
-  it('contains the RecipesContainer', () => {
-    expect(app).to.have.descendants(RecipesContainer)
+  it('contains the batchesContainer', () => {
+    expect(app).to.have.descendants(batchesContainer)
   })
 })

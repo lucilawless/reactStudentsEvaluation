@@ -1,7 +1,7 @@
-import recipes from './recipes'
+import batches from './batches'
 import currentUser from './currentUser'
 
 export default {
-  recipes,
+  batches,
   currentUser,
 }

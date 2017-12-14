@@ -1,8 +1,8 @@
 import { expect } from 'chai'
-import recipes from './recipes'
+import batches from './batches'
 
-describe('recipes reducer', () => {
-  const reducer = recipes
+describe('batches reducer', () => {
+  const reducer = batches
   const initialState = []
 
   it('returns an empty array for the initial state', () => {

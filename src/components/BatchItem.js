@@ -5,7 +5,7 @@ import Vegan from '../images/vegan.svg'
 import Vegetarian from '../images/vegetarian.svg'
 
 
-class RecipeItem extends PureComponent {
+class batchItem extends PureComponent {
   static propTypes = {
     title: PropTypes.string.isRequired,
     summary: PropTypes.string.isRequired,
@@ -18,7 +18,7 @@ class RecipeItem extends PureComponent {
     const { title, summary, vegan, vegetarian, pescatarian } = this.props
 
     return(
-      <article className="recipe">
+      <article className="batch">
         <h1>{ title }</h1>
         <div>
           <p>{ summary }</p>
@@ -33,4 +33,4 @@ class RecipeItem extends PureComponent {
   }
 }
 
-export default RecipeItem
+export default batchItem
