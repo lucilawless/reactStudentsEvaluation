@@ -1,8 +1,8 @@
 export const CREATE_BATCH = 'CREATE_BATCH'
 
-export default (newbatch) => {
+export default (newBatch) => {
   return {
     type: CREATE_BATCH,
-    payload: newbatch
+    payload: newBatch
   }
 }

@@ -6836,9 +6836,9 @@ to-fast-properties@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-1.0.3.tgz#b83571fa4d8c25b82e231b06e3a3055de4ca1a47"
 
-to-markdown@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/to-markdown/-/to-markdown-3.1.0.tgz#63ffc1a1b00ac54e3f9332bec9f207c24313414c"
+to-markdown@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/to-markdown/-/to-markdown-3.1.1.tgz#251e241b8c74c7ad177292e6c52cc195c9268c11"
   dependencies:
     collapse-whitespace "1.1.2"
     jsdom "^9.0.0"

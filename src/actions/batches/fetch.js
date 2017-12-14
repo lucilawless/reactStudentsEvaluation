@@ -9,7 +9,7 @@ export default () => {
   return dispatch => {
     // dispatch(loading(true)) // ???
 
-    api.get('batches')
+    api.get('/batches')
       .then(res => dispatch({ type: FETCHED_BATCHES, payload: res.body }))
       //.catch(err => dispatch(loadError(err))) ???
 

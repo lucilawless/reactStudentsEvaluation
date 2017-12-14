@@ -6,6 +6,7 @@ import 'medium-editor/dist/css/medium-editor.css'
 import 'medium-editor/dist/css/themes/default.css'
 import CreateBatch from '../actions/batches/create'
 import './BatchEditor.css'
+import Title from '../components/Title'
 
 class BatchEditor extends PureComponent {
   constructor(props) {
@@ -20,9 +21,21 @@ class BatchEditor extends PureComponent {
     }
   }
 
-  updateIntro(number, medium) {
+  updateBatchNumber(number, medium) {
     this.setState({
       batchNumber: number
+    })
+  }
+
+  updateStartAt(date, medium) {
+    this.setState({
+      startedAt: date
+    })
+  }
+
+  updateEndsAt(date, medium) {
+    this.setState({
+      endAt: date
     })
   }
 
@@ -37,12 +50,9 @@ class BatchEditor extends PureComponent {
   }
 
   saveBatch() {
+    const { batchNumber, startedAt, endAt } = this.state
+    const batch = { batchNumber, startedAt, endAt }
     console.table(this.state)
-
-    const batch = {
-      ...this.state,
-      batchNumber: toMarkdown(this.state.batchNumber)
-    }
 
     console.table(batch)
 
@@ -52,7 +62,7 @@ class BatchEditor extends PureComponent {
   render() {
     return (
       <div className="editor">
-      <h3>Add New Batch</h3>
+      <h4><Title content="Add New Batch" /></h4>
       <label> Batch Number:
         <input
           type="number"
